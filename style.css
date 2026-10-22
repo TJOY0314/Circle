@@ -32,3 +32,19 @@
 .intro{background:#e1ead8;border-right:2px solid #b1c1a6}
 .login-form .notice{background:#e3ecd9;color:#4c6342;border:1px solid #bcccae}
 dialog{border:2px solid #a5b798;background:#f3f7ee}
+
+/* Canvas gestures must not start the browser's text selection or native drag. */
+.canvas{user-select:none;-webkit-user-select:none;cursor:grab}
+.canvas:active{cursor:grabbing}
+.canvas input,.canvas textarea{user-select:text;-webkit-user-select:text;cursor:text}
+.canvas button{cursor:pointer}
+.canvas .node{cursor:grab;gap:var(--node-gap,10px)}
+.canvas .node strong{font-size:var(--node-label-size,16px);line-height:1.35}
+.canvas .node small{font-size:var(--node-tag-size,9px);line-height:1.4}
+.editor,.editor input,.editor textarea{user-select:text;-webkit-user-select:text}
+.preview-circle{flex-shrink:0;transition:width .08s,height .08s,font-size .08s;max-width:100%}
+.login-form .password-field{position:relative}
+.login-form .password-field input{padding-right:66px}
+.login-form .password-field button{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:auto;margin:0;padding:7px 9px;font-size:11px;border:0;background:#eef3e8;color:#42583a}
+.google-login{display:flex;justify-content:center;align-items:center;gap:12px;font-weight:500;background:#fff;border:1px solid #aab99f}
+.google-g{font-size:20px;font-weight:700;color:#4285f4;font-family:Arial,sans-serif}
